@@ -1,0 +1,339 @@
+body {
+	font-family: 'Alfa Slab One', cursive;
+	background: #4F2F4F;
+	padding: 0;
+	margin: 0;
+	overflow-x: hidden;
+}
+
+@media (min-width: 1000px) {
+body {
+	overflow-y: hidden;
+}
+	
+}
+/*------------STARTMENU------------*/
+
+.startmenu {
+	max-width: 100%;
+	position: relative;
+	background-image: linear-gradient(135deg, #e76eb1, purple, #e76eb1, purple, #e76eb1);
+	text-align: center;
+	width: 30%;
+	height: 60%;
+	top: 40px;
+	left: 27%;
+	color: white;
+	padding: 22% 10% 4% 10%;
+	border-radius: 10px;
+}
+
+.startmenu img {
+	max-width: 100%;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	margin: 0;
+	border-radius: 10px;
+	user-drag: none;
+	user-drag: none; 
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none
+}
+
+.startmenu h1 {
+	max-width: 100%;
+	letter-spacing: 2px;
+	text-shadow: 2px 2px 3px black;
+	margin: 0;
+}
+
+.startmenu button {
+	max-width: 100%;
+	margin-top: 30px;
+	background: #fcdef0;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 25px;
+	font-size: 24px;
+	border: 3px inset pink;
+	outline: none;
+}
+
+.startmenu button:hover {
+	max-width: 100%;
+	cursor: pointer;
+	border: 3px outset pink;
+	background: purple;
+	color: white;
+}
+
+.startmenu p {
+	max-width: 100%;
+	text-shadow: 2px 2px 3px black;
+	font-size: 20px;
+}
+
+.gamebegins {
+	display: none;
+}
+
+/*------------STARTGAME------------*/
+
+.gamearea {
+	position: fixed;
+	background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(img/898.jpg);
+	background-size: cover;
+	background-position: 60%;
+	width: 1440px;
+	height: 900px;
+	margin: 0;
+	padding: 0;
+	cursor: url(img/fred2.png), auto;
+	overflow-y: hidden;
+}
+
+.gameareaNONE {
+	display: none;
+}
+
+.jerom {
+	position: fixed;
+	margin-top: -300px;
+	width: 170px;
+	user-drag: none;
+	user-drag: none; 
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+.jeromA {
+	animation: jeromA 5s linear 5;
+}
+
+@keyframes jeromA {
+	0% {
+		margin-top: -300px;
+	}
+	100% {
+		margin-top: 900px;
+	}
+}
+
+.jeromB {
+	animation: jeromB 4s linear 10;
+}
+
+@keyframes jeromB {
+	0% {
+		margin-top: -300px;
+	}
+	100% {
+		margin-top: 900px;
+	}
+}
+
+.jeromC {
+	animation: jeromC 3s linear 10;
+}
+
+@keyframes jeromC {
+	0% {
+		margin-top: -300px;
+	}
+	100% {
+		margin-top: 900px;
+	}
+}
+
+.jeromD {
+	animation: jeromD 2s linear 10;
+}
+
+@keyframes jeromD {
+	0% {
+		margin-top: -300px;
+	}
+	100% {
+		margin-top: 900px;
+	}
+}
+
+.jeromE {
+	animation: jeromE 1s linear 65;
+}
+
+@keyframes jeromE {
+	0% {
+		margin-top: -300px;
+	}
+	100% {
+		margin-top: 900px;
+	}
+}
+
+.jeromF {
+	animation: jeromF 0.5s linear 100;
+}
+
+@keyframes jeromF {
+	0% {
+		margin-top: -300px;
+	}
+	100% {
+		margin-top: 900px;
+	}
+}
+
+.jeromG {
+	animation: jeromG 0.1s linear infinite;
+}
+
+@keyframes jeromG {
+	0% {
+		margin-top: -300px;
+	}
+	100% {
+		margin-top: 900px;
+	}
+}
+
+.gamearea h1 {
+	position: relative;
+	font-size: 150px;
+	transition: opacity 1s;
+	color: white;
+	letter-spacing: 10px;
+	text-shadow: 2px 2px 3px black;
+	text-align: center;
+	top: 200px;
+}
+
+.counter {
+	opacity: 0;
+}
+
+.gamearea ul {
+	position: relative;
+	display: flex; 
+	list-style-type: none;
+	font-size: 40px;
+	color: white;
+	letter-spacing: 2px;
+	padding: 0;
+	margin: 0;
+	margin-top: 20px;
+	z-index: 999;
+
+}
+
+.gamearea li:first-of-type {
+	position: fixed;
+	padding: 0;
+	left: 50px;
+}
+
+.gamearea li:nth-of-type(2) {
+	position: fixed;
+	right: 50px;
+}
+
+.ulgone {
+	display: none;
+}
+
+/*------------ENDGAME------------*/
+
+.body {
+  	position: fixed;
+	background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(img/898.jpg);
+	background-size: cover;
+	background-position: 60%;
+	filter: blur(4px);
+  	-webkit-filter: blur(4px);
+	width: 1440px;
+	height: 900px;
+	margin: 0;
+	padding: 0;
+	overflow-y: hidden;
+}
+
+.endmenu {
+	max-width: 100%;
+	position: relative;
+	background-image: linear-gradient(135deg, #e76eb1, purple, #e76eb1, purple, #e76eb1);
+	text-align: center;
+	width: 30%;
+	height: 60%;
+	top: 85px;
+	left: 25%;
+	color: white;
+	padding: 21% 10% 4% 10%;
+	border-radius: 10px;
+}
+
+.endmenuNONE {
+	display: none;
+}
+
+.endmenu img {
+	max-width: 100%;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	margin: 0;
+	border-radius: 10px;
+	user-drag: none;
+	user-drag: none; 
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none
+}
+
+.endmenu h1 {
+	max-width: 100%;
+	letter-spacing: 2px;
+	text-shadow: 2px 2px 3px black;
+	margin-bottom: 10px;
+}
+
+.endmenu button {
+	max-width: 100%;
+	margin-top: 50px;
+	background: #fcdef0;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 25px;
+	font-size: 24px;
+	border: 3px inset pink;
+	outline: none;
+}
+
+.endmenu button:hover {
+	max-width: 100%;
+	cursor: pointer;
+	border: 3px outset pink;
+	background: purple;
+	color: white;
+}
+
+.endmenu p {
+	max-width: 100%;
+	text-shadow: 2px 2px 3px black;
+	font-size: 20px;
+	margin-bottom: 50px;
+}
+
+.endmenu .highscore, .endmenu .points {
+	font-size: 24px;
+}
