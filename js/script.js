@@ -181,18 +181,22 @@ function retry() {
 }
 
 for(var i = 0; i < startButton.length; i++) {
-startButton[i].addEventListener('click',() => {
+  startButton[i].addEventListener('click',() => {
+    startGame(); 
+    jeromMovement();
+    counter();
+    retry();
+  });
+}
+
+startButton[0].addEventListener('click',() => {
   if(storedInput > 0){
     for(var i = 0; i < highscore.length; i++) {
       highscore[i].innerHTML = "HIGHSCORE: " + topscore;
     }
   }
-  startGame(); 
-  jeromMovement();
-  counter();
-  retry();
 });
-}
+
 document.addEventListener('fullscreenchange', exitHandler);
 document.addEventListener('webkitfullscreenchange', exitHandler);
 document.addEventListener('mozfullscreenchange', exitHandler);
