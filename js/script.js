@@ -9,6 +9,12 @@ var endGame = document.querySelector('.endmenuNONE');
 var highscore = document.querySelectorAll('.highscore');
 var storedInput = sessionStorage.getItem('Highscore');
 
+if(storedInput > 0){
+  for(var i = 0; i < highscore.length; i++) {
+    highscore[i].innerHTML = "HIGHSCORE: " + topscore;
+  }
+}
+
 function startGame(event) {
 	hideMenu.classList.add('gamebegins');
 	gameArea.classList.add('gamearea');
@@ -188,14 +194,6 @@ for(var i = 0; i < startButton.length; i++) {
     retry();
   });
 }
-
-startButton[0].addEventListener('click',() => {
-  if(storedInput > 0){
-    for(var i = 0; i < highscore.length; i++) {
-      highscore[i].innerHTML = "HIGHSCORE: " + topscore;
-    }
-  }
-});
 
 document.addEventListener('fullscreenchange', exitHandler);
 document.addEventListener('webkitfullscreenchange', exitHandler);
