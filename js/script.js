@@ -1,4 +1,6 @@
 
+localStorage.setItem('topscore');
+
 var hideMenu = document.querySelector('.startmenu');
 var startButton = document.querySelectorAll('.startbutton');
 var gameArea = document.querySelector('.gameareaNONE');
