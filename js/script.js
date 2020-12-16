@@ -1,6 +1,3 @@
-
-localStorage.setItem('topscore');
-
 var hideMenu = document.querySelector('.startmenu');
 var startButton = document.querySelectorAll('.startbutton');
 var gameArea = document.querySelector('.gameareaNONE');
@@ -10,6 +7,7 @@ var jeromImg = document.querySelector('.jerom');
 var points = document.querySelectorAll('.points');
 var endGame = document.querySelector('.endmenuNONE');
 var highscore = document.querySelectorAll('.highscore');
+var storedInput = localStorage.getItem('Highscore');
 
 function startGame(event) {
 	hideMenu.classList.add('gamebegins');
@@ -152,14 +150,20 @@ function pointCounter() {
   }
 }
 
-var topscore = 0;
+if(storedInput === null || storedInput === undefined) {
+  var topscore = 0;
+} else {
+  topscore = storedInput;
+}
 
 function topScore() {
+  console.log(topscore)
   if (score >= topscore) {
     topscore = score;
     for(var i = 0; i < highscore.length; i++) {
-    highscore[i].innerHTML = "HIGHSCORE: " + topscore;
-  }
+      highscore[i].innerHTML = "HIGHSCORE: " + topscore;
+    }
+    localStorage.setItem('Highscore', topscore);
   }
 }
 
@@ -178,6 +182,11 @@ function retry() {
 
 for(var i = 0; i < startButton.length; i++) {
 startButton[i].addEventListener('click',() => {
+  if(storedInput > 0){
+  for(var i = 0; i < highscore.length; i++) {
+    highscore[i].innerHTML = "HIGHSCORE: " + storedInput;
+  }
+}
   startGame(); 
   jeromMovement();
   counter();
