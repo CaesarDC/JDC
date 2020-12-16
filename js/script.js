@@ -7,7 +7,7 @@ var jeromImg = document.querySelector('.jerom');
 var points = document.querySelectorAll('.points');
 var endGame = document.querySelector('.endmenuNONE');
 var highscore = document.querySelectorAll('.highscore');
-var storedInput = localStorage.getItem('Highscore');
+var storedInput = sessionStorage.getItem('Highscore');
 
 function startGame(event) {
 	hideMenu.classList.add('gamebegins');
@@ -163,7 +163,7 @@ function topScore() {
     for(var i = 0; i < highscore.length; i++) {
       highscore[i].innerHTML = "HIGHSCORE: " + topscore;
     }
-    localStorage.setItem('Highscore', topscore);
+    sessionStorage.setItem('Highscore', topscore);
   }
 }
 
@@ -183,10 +183,10 @@ function retry() {
 for(var i = 0; i < startButton.length; i++) {
 startButton[i].addEventListener('click',() => {
   if(storedInput > 0){
-  for(var i = 0; i < highscore.length; i++) {
-    highscore[i].innerHTML = "HIGHSCORE: " + storedInput;
+    for(var i = 0; i < highscore.length; i++) {
+      highscore[i].innerHTML = "HIGHSCORE: " + topscore;
+    }
   }
-}
   startGame(); 
   jeromMovement();
   counter();
